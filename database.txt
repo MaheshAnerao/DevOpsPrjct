@@ -1,0 +1,17 @@
+ sudo apt install apache2 mariadb-server php libapache2-mod-php php-mysql
+CREATE USER 'Nilesh'@'localhost' IDENTIFIED BY '123';
+CREATE DATABASE Nilesh;
+GRANT ALL PRIVILEGES ON Nilesh.* TO 'Nilesh'@'localhost';
+USE Nilesh;
+
+CREATE TABLE Nilesh (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    message TEXT NOT NULL
+);
+
+INSERT INTO Nilesh (name, email, message)
+VALUES
+    ('John Doe', 'john@example.com', 'Hello there!'),
+    ('Jane Smith', 'jane@example.com', 'Nice to meet you.');
