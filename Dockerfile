@@ -1,3 +1,3 @@
 FROM nginx:latest
-COPY new/ /var/www/html
+COPY web_app/ /var/www/html
 EXPOSE 80
